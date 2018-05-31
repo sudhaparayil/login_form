@@ -1,0 +1,34 @@
+<div class="example-container">
+    <div class="container">
+    <form  role="form"  (ngSubmit)="addRegister(newRegister);" novalidate>
+    <mat-form-field>
+      <input matInput placeholder="Name"  name="name"  [(ngModel)]="newRegister.name"> 
+    </mat-form-field>
+    <div class="clearfix"></div>
+    <mat-form-field>
+        <input matInput placeholder="Email"  name="email"  [(ngModel)]="newRegister.email">
+      </mat-form-field> 
+      <div class="clearfix"></div>
+    <mat-form-field>
+      <mat-select placeholder="Gender"  name="gender"  [(ngModel)]="newRegister.gender">
+        <mat-option value="male">Male</mat-option>
+        <mat-option value="female">Female</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="clearfix"></div>
+    <mat-form-field>
+        <textarea matInput placeholder="Address"  name="address"  [(ngModel)]="newRegister.address"></textarea>
+      </mat-form-field>
+      <div class="clearfix"></div>
+      <mat-form-field>
+          <input matInput placeholder="Password"  name="psw"  [(ngModel)]="newRegister.name"> 
+        </mat-form-field>
+        <div class="clearfix"></div>
+        
+      <input  (change)="displayPhoto($event)" accept=".png,.jpeg,.jpg,.bmp,.gif" id="file-input" name="file"
+      type="file" />
+      <div class="clearfix"></div>
+      <button type="submit" class="signupbtn">Sign Up</button>
+      </form>
+      </div>
+  </div>

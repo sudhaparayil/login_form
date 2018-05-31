@@ -35,5 +35,19 @@ export class AdminService {
       .map(res => res.json());
 
   }
-  
+  getuser() {
+    let headers = this.setHeaderWithAuthorization();
+    return this.http.get(this.serviceUrl + 'alluser',{ headers: headers })
+      .map(res => res.json());
+  }
+  getoneuser(id:any) {
+    let headers = this.setHeaderWithAuthorization();
+    return this.http.get(this.serviceUrl + "oneuser/" + id, { headers: headers})
+      .map(res => res.json());
+  }
+  logout() {
+    let headers = this.setHeaderWithAuthorization();
+    return this.http.get(this.config.siteUrl + '/auth/logout',{ headers: headers })
+      .map(res => res.json());
+  }
 }

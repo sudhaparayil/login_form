@@ -7,13 +7,16 @@ import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { AdminService} from './services/admin.service';
+import { ProfileComponent } from './components/profile/profile.component';
 const appRoutes: Routes = [
-  {path: '', component: HomeComponent },
+  {path: 'login', component: HomeComponent },
+  {path: 'profile/:id', component: ProfileComponent },
 ]
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

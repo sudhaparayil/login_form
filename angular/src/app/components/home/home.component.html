@@ -3,7 +3,9 @@
   <form  role="form"  (ngSubmit)="addRegister(newRegister);" novalidate>
     <div class="container">
       <h1>Sign Up</h1>
-      
+      <label for="email"><b>Name</b></label>
+      <input type="text" placeholder="Enter Email" name="name"  [(ngModel)]="newRegister.name" required>
+  
   
       <label for="email"><b>Email</b></label>
       <input type="text" placeholder="Enter Email" name="email"  [(ngModel)]="newRegister.email" required>
@@ -13,11 +15,12 @@
   
       <label for="psw-repeat"><b>Repeat Password</b></label>
       <input type="password" placeholder="Repeat Password" name="psw-repeat" [(ngModel)]="newRegister.pswrepeat" required>
-      
-     
+      <label for="psw-repeat"><b>Photo</b></label>
+      <input (change)="displayPhoto($event)" accept=".png,.jpeg,.jpg,.bmp,.gif" id="file-input" name="file"
+      type="file" />
       
       <div class="clearfix">
-       
+           <a class="google-btn" href="/auth/google">Google+</a>
         <button type="submit" class="signupbtn">Sign Up</button>
       </div>
     </div>

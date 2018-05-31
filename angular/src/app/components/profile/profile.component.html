@@ -1,0 +1,9 @@
+<!-- {{user.photo.data.}} -->
+<!-- <img  src="{{http://localhost:3000/admin/getphoto/679}}" height="100" alt="logo">  -->
+<img   [src]="tmplogoSrc" >
+<!-- {{user.photo.contentType}}{{tmplogoSrc}} -->
+<h1>{{user.name}}</h1>
+<h1>{{user.email}}</h1>
+<h1>{{user.password}}</h1>
+
+<button (click)='logout()'>logout</button>

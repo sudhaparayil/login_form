@@ -27,6 +27,8 @@ const UserSchema = mongoose.Schema({
         data: Buffer,
         contentType: String
     },
+    thumbnail: {type:String}
+    
   
 });
 
